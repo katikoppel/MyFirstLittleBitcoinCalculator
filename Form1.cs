@@ -39,7 +39,7 @@ namespace BitcoinCalculator
                 tulemuslabel.Visible = true;
                 Bitcoinrates newbitcoinrate = GetRates();
                 float result = float.Parse(bitcoinamountinput.Text) * (float)newbitcoinrate.Bpi.EUR.rate_float;
-                resultlabel.Text = $"{result} Bitcoini {newbitcoinrate.Bpi.EUR.code}";
+                resultlabel.Text = $"{result} {newbitcoinrate.Bpi.EUR.code}";
             }
 
 
