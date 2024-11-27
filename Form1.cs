@@ -42,6 +42,32 @@ namespace BitcoinCalculator
                 resultlabel.Text = $"{result} {newbitcoinrate.Bpi.EUR.code}";
             }
 
+            if (currencyselector.SelectedItem.ToString() == "USD")
+            {
+                resultlabel.Visible = true;
+                tulemuslabel.Visible = true;
+                Bitcoinrates newbitcoinrate = GetRates();
+                float result = float.Parse(bitcoinamountinput.Text) * (float)newbitcoinrate.Bpi.USD.rate_float;
+                resultlabel.Text = $"{result} {newbitcoinrate.Bpi.USD.code}";
+            }
+
+            if (currencyselector.SelectedItem.ToString() == "GBP")
+            {
+                resultlabel.Visible = true;
+                tulemuslabel.Visible = true;
+                Bitcoinrates newbitcoinrate = GetRates();
+                float result = float.Parse(bitcoinamountinput.Text) * (float)newbitcoinrate.Bpi.GBP.rate_float;
+                resultlabel.Text = $"{result} {newbitcoinrate.Bpi.GBP.code}";
+            }
+
+            if (currencyselector.SelectedItem.ToString() == "EEK")
+            {
+                resultlabel.Visible = true;
+                tulemuslabel.Visible = true;
+                Bitcoinrates newbitcoinrate = GetRates();
+                float result = float.Parse(bitcoinamountinput.Text) * (float)(newbitcoinrate.Bpi.EUR.rate_float*15.6466);
+                resultlabel.Text = $"{result} EEK";
+            }
 
         }
 

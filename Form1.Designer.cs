@@ -45,11 +45,12 @@
             this.currencyselector.Items.AddRange(new object[] {
             "EUR",
             "USD",
+            "GBP",
             "EEK"});
             this.currencyselector.Location = new System.Drawing.Point(55, 99);
             this.currencyselector.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.currencyselector.Name = "currencyselector";
-            this.currencyselector.Size = new System.Drawing.Size(200, 26);
+            this.currencyselector.Size = new System.Drawing.Size(200, 44);
             this.currencyselector.TabIndex = 0;
             this.currencyselector.Text = "Vali valuuta";
             this.currencyselector.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -74,7 +75,7 @@
             this.bitcoinamountinput.Location = new System.Drawing.Point(55, 64);
             this.bitcoinamountinput.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bitcoinamountinput.Name = "bitcoinamountinput";
-            this.bitcoinamountinput.Size = new System.Drawing.Size(200, 23);
+            this.bitcoinamountinput.Size = new System.Drawing.Size(200, 38);
             this.bitcoinamountinput.TabIndex = 2;
             // 
             // label1
@@ -85,7 +86,7 @@
             this.label1.ForeColor = System.Drawing.Color.Chartreuse;
             this.label1.Location = new System.Drawing.Point(52, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 23);
+            this.label1.Size = new System.Drawing.Size(323, 45);
             this.label1.TabIndex = 3;
             this.label1.Text = "Sisesta Bitcoini arv";
             // 
@@ -97,7 +98,7 @@
             this.tulemuslabel.ForeColor = System.Drawing.Color.Lime;
             this.tulemuslabel.Location = new System.Drawing.Point(52, 202);
             this.tulemuslabel.Name = "tulemuslabel";
-            this.tulemuslabel.Size = new System.Drawing.Size(70, 23);
+            this.tulemuslabel.Size = new System.Drawing.Size(144, 45);
             this.tulemuslabel.TabIndex = 4;
             this.tulemuslabel.Text = "Tulemus";
             this.tulemuslabel.Click += new System.EventHandler(this.label2_Click);
@@ -105,12 +106,12 @@
             // resultlabel
             // 
             this.resultlabel.BackColor = System.Drawing.Color.Fuchsia;
-            this.resultlabel.Font = new System.Drawing.Font("Algerian", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultlabel.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultlabel.ForeColor = System.Drawing.Color.Lime;
             this.resultlabel.Location = new System.Drawing.Point(55, 229);
             this.resultlabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.resultlabel.Name = "resultlabel";
-            this.resultlabel.Size = new System.Drawing.Size(200, 50);
+            this.resultlabel.Size = new System.Drawing.Size(278, 97);
             this.resultlabel.TabIndex = 5;
             this.resultlabel.Text = "POLE";
             this.resultlabel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -118,7 +119,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
