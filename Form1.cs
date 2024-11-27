@@ -32,6 +32,14 @@ namespace BitcoinCalculator
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (currencyselector.SelectedItem == null)
+            { MessageBox.Show("Vali valuuta!", "Sisestusviga", MessageBoxButtons.OK, MessageBoxIcon.Warning); 
+                return; };
+            if (string.IsNullOrWhiteSpace(bitcoinamountinput.Text))
+            {
+                MessageBox.Show("Sisesta Bitcoinide arv!", "Sisestusviga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            };
 
             if (currencyselector.SelectedItem.ToString() == "EUR")
             {
@@ -65,7 +73,7 @@ namespace BitcoinCalculator
                 resultlabel.Visible = true;
                 tulemuslabel.Visible = true;
                 Bitcoinrates newbitcoinrate = GetRates();
-                float result = float.Parse(bitcoinamountinput.Text) * (float)(newbitcoinrate.Bpi.EUR.rate_float*15.6466);
+                float result = float.Parse(bitcoinamountinput.Text) * (float)(newbitcoinrate.Bpi.EUR.rate_float * 15.6466);
                 resultlabel.Text = $"{result} EEK";
             }
 
@@ -81,7 +89,7 @@ namespace BitcoinCalculator
             var webStream = webResponse.GetResponseStream();
 
             Bitcoinrates bitcoin;
-            using(var responseReader = new StreamReader(webStream))
+            using (var responseReader = new StreamReader(webStream))
             {
                 var data = responseReader.ReadToEnd();
                 bitcoin = JsonConvert.DeserializeObject<Bitcoinrates>(data);
